@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* || RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || UTILITY CLASSES */
+.nowrap {
+  white-space: nowrap;
+}
+
+/* || VARIABLES */
+:root{
+
+  /* FONT */
+  --FA: "Nunito", sans-serif;
+  --FS:min(2.25rem,3vh); 
+  --FS-XL: 3rem;
+
+  /* color */
+  --BGCOLOR: #425569;
+  --ALT-BGCOLOR: #1e293b;
+  --RADIAL-COLOR: #fff;
+  --LIGHT-COLOR :#fff;
+  --DARK-COLOR: #000;
+
+  /* SQUARE */
+  --SQUARE-BGCOLOR: teal;
+  --SQUARE-SIZE: max(150px, 20vw);
+
+
+  /* GENERAL */
+  --PADDING: 0.5em;
+  --SHADOWS: 0 7px 5px -5px var(--DARK-COLOR);
+  --BORDERS: 2px solid var(--DARK-COLOR);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --BGCOLOR: #000;
+    --ALT-BGCOLOR: #333;
+    --RADIAL-COLOR: rgb(217,217,217);
+    --SQUARE-BGCOLOR: rgb(204, 137, 204);
+  }
+  
+  
+}
+  
+/* || GENERAL STYLES */
+
+body {
+  font:var(--FS) var(--FA);
+  min-height: 100vh;
+  background-color:var(--BGCOLOR);
+  background-image: radial-gradient(var(--RADIAL-COLOR),var(--BGCOLOR));
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+nav,
+footer {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 100%;
+  text-align: center;
+}
+header,
+footer {  
+  position: sticky;
+  background-color: var(--BGCOLOR);
+  color:var(--LIGHT-COLOR);
+  text-align: center;
+}
+
+header{
+  top:0;
+}
+
+nav {
+  background-color: var(--LIGHT-COLOR);
+  color:var(--DARK-COLOR);
+  border-bottom: var(--BORDERS);
+  box-shadow:var(--SHADOWS);
+}
+
+main {
+  flex-grow: 1;
+  padding: var(--PADDING)
+   /*display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+  gap:min(4vw,5px); */
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+ }
+
+footer {
+  bottom: 0;
+}
+
+/* || FEATURES */
+.square--highlight {
+  --SQUARE-BGCOLOR: aqua;
+}
+
+.square {
+  background-color: var(--SQUARE-BGCOLOR);
+  width: var(--SQUARE-SIZE);
+  height: var(--SQUARE-SIZE);
+  border: var(--BORDERS);
+  border-radius: 15px;
+  display: grid;
+  place-content: center;
+  font-size:var(--FS-XL);
+  box-shadow: var(--SHADOWS);
+}
