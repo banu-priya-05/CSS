@@ -20,7 +20,7 @@
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="about.html">About ></a>
+                    <a href="about.html">About</a>
                 </li>
                 <li>
                     <a href="menu">Menu</a>
@@ -41,9 +41,20 @@
         </figure>
     </section>
 
-    <main>
-        <h2>Contact Us:</h2>
-        <h3>Our Contact Form</h3>
+    <main class="main">
+        <article class="main__article">
+            <h2>Our Location</h2>
+            <address>
+                33 OMR Street, Casa Grand near,
+                Chennai. MO:999-999-9999
+                
+                Phone:<a href="tel:+9166">666-666-66666</a>
+            </address>
+        </article>
+           
+        <article class="main__article">
+        <h2>Our Contact Form</h2>
+
             <form action="/action-page.php" method="get">
                 <fieldset>
                     <legend>Send us A Message</legend>
@@ -53,28 +64,31 @@
                             required autofocus>
                     </p>
                     <p>
-                        <label for="@mail">Email:</label>
-                        <input type="text" name="@mail" id="@mail" placeholder="123@gmail" required>
+                        <label for="email">Email:</label>
+                        <input type="email" name="mail" id="@mail" placeholder="Your mail" required>
                     </p>
                     <p>
-                        <label for="yourmessage">Your message:</label><br>
-                    </p>
-                    <textarea id="yourmessage" name="yourmessage" rows="5"
-                    cols="50"></textarea>
-                    <p>
-                        <input type="submit" value="Send">
-                        <input type="reset" value="Reset">
+                            <label for="message">Your message:</label><br>
+                        <br>
+                        <textarea id="message" name="message" rows="10"
+                        cols="30" placeholder="Type Your message here"></textarea>
                     </p>
                 </fieldset>
+                    
+                <button type="submit">Send</button>
+                <button type="reset">Reset</button>
+            
             </form>
-            <p>
-                <a href="#">Back to Top</a>
-            </p>
+        </article>
+        
+            
     </main>
-<hr>
-    <footer>
-        <p>Copyright &copy; The Dosa Delight Shop</p>
-    </footer>    
+    <footer class="footer">
+        <p>
+            <span class="nowrap">Copyright &copy; </span>
+            <span class="nowrap"> Dosa Delight Shop </span>
+        </p>
+    </footer>  
 </body>
 
 </html>
